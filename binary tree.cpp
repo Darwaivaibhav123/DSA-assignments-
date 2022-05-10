@@ -4,26 +4,25 @@ using namespace std;
 
 struct node
 {
-    char label[50];  // For name of the book,chapter,etc.
-    int chcount;  //For counting the number of child to the parent node.
-    node *child[50];  //creating pointer array for storing the address of the child node.
+    char label[50];  
+    int chcount;  
+    node *child[50];
 }* root;  // For storing the address of the root node.
 
 class tree
 {
     public:
-    tree()     //Default constructor.
+    tree().
     {
         root=NULL;
     }
     
-    void insert();      // Initializing the function.
+    void insert();      
     void display();
 };
 
-void tree::insert() // Defining the function outside the class using scope resolution operator.
-{
-    root=new node();  // creation of root node.
+void tree::insert() 
+    root=new node();  
     cout<<"Enter the name of the book: "<<endl;
     cin>>root->label;
     cout<<"Enter the number of chapter in the book: "<<endl;
@@ -82,9 +81,8 @@ void tree::display()
 
 int main()
 {
-   tree t;    // Creating an object for tree class.
-   int ch;  //For entering the menu choices.
-
+   tree t;    
+   int ch;  
    int f=1;
    while(f==1)
    {
