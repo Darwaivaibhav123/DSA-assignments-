@@ -7,12 +7,12 @@ struct node
     char label[50];  
     int chcount;  
     node *child[50];
-}* root;  // For storing the address of the root node.
+}*root;  // For storing the address of the root node.
 
 class tree
 {
     public:
-    tree().
+    tree()
     {
         root=NULL;
     }
@@ -22,6 +22,7 @@ class tree
 };
 
 void tree::insert() 
+{
     root=new node();  
     cout<<"Enter the name of the book: "<<endl;
     cin>>root->label;
